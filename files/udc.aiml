@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    
+<!-- Starting text -->
+  <category>
+    <pattern>*</pattern>
+    <template>
+        <message>Hi, I'm Mochi. I can give you career path suggestions for computer science student.</message>
+        <message>You may also type "quit" at any time to exit.</message>
+        <message><message>Shall we start?</message>
+            <button>
+              <text>Sure.</text>
+              <postback>START</postback>
+            </button>
+            <button>
+              <text>No thanks.</text>
+              <postback>QUIT</postback>
+            </button></message>
+        </template>
+    </category>
+  
+<!-- Quit -->
+    <category>
+        <pattern>QUIT</pattern>
+        <template>
+          <message>Alright. If you want further information on possible career choices, feel free to click
+          <link>
+              <text>here</text>
+              <url>https://www.computerscience.org/careers/</url>
+          </link>
+          </message>
+          <message>Good luck Padawan!</message>
+        </template>
+    </category>
+  
+  <!-- Coding or no coding? -->
+    <category>
+        <pattern>START</pattern>
+        <template>
+            <message>Do you enjoy coding?</message>
+            <button>
+              <text>"Eat, sleep, code" is my motto.</text>
+              <postback>YES CODING</postback>
+            </button>
+            <button>
+              <text>It's not my favorite.</text>
+              <postback>NO CODING</postback>
+            </button>
+        </template>
+    </category>
+  
+  <!-- Yes to coding -->
+    <category>
+        <pattern>YES CODING</pattern>
+        <template>
+            <message>Do you like the idea of keeping companies or individuals safe?</message>
+            <button>
+                <text>I'm a hero!</text>
+                <postback>YES CYBERSECURITY</postback>
+            </button>
+            <button>
+                <text>Too much responsibility.</text>
+                <postback>NO CYBERSECURITY</postback>
+            </button>
+        </template>
+    </category>
+    
+<!-- Yes to cybersecurity -->    
+    <category>
+        <pattern>YES CYBERSECURITY</pattern>
+        <template>
+            <message>Great! A career in cybersecurity might be for you.</message>
+            <message> <link>
+                <text>Information security analysts</text>
+                <url>https://www.computerscience.org/careers/information-security-analyst/</url>
+            </link> plan and carry out security measures to protect an organization’s computer networks and systems.</message>
+        </template>
+    </category>
+
+<!-- No to cybersecurity -->    
+    <category>
+        <pattern>NO CYBERSECURITY</pattern>
+        <template>
+            <message>Does working with large sets of data sound fun?</message>
+            <button>
+                <text>I'm a numbers person!</text>
+                <postback>YES DATA SCIENTIST</postback>
+            </button>
+            <button>
+                <text>Sounds boring honestly.</text>
+                <postback>NO DATA SCIENTIST</postback>
+            </button>
+        </template>
+    </category>
+
+<!-- Yes to data analyst -->
+    <category>
+        <pattern>YES DATA SCIENTIST</pattern>
+        <template>            
+            <message>Awesome. Data science might be your calling.</message>
+            <message><link>
+              <text>A data scientist's </text>
+              <url>https://www.computerscience.org/careers/data-science/how-to-become/</url>
+            </link>primary goal is to use data to answer questions, make predictions, and solve problems.  </message>
+        </template>
+        </category>
+
+<!-- No to data analyst -->
+    <category>
+        <pattern>NO DATA SCIENTIST</pattern>
+        <template>
+            <message>Software development might be the way to go.</message>
+            <message><link>
+              <text>Software engineers</text>
+              <url>https://www.computerscience.org/careers/software-engineer/</url>
+            </link> design and develop computer programs and applications.</message>
+        </template>
+    </category>
+
+    
+<!-- No coding -->    
+    <category>
+        <pattern>NO CODING</pattern>
+        <template>
+            <message>Not everyone does. Do you prefer to oversee one large goal or do the little details of what a user sees
+            when interacting with a product or service seem more interesting?</message>
+            <button>
+                <text>I'm a big picture person.</text>
+                <postback>YES PM</postback>
+            </button>
+            <button>
+                <text>I like the details.</text>
+                <postback>YES UX DESIGN</postback>
+            </button>
+        </template>
+    </category>
+    
+<!-- Yes to PM -->    
+    <category>
+        <pattern>YES PM</pattern>
+        <template>
+            <message>Sounds like program management might be a good fit.</message>
+            <message>
+                <link>
+                    <text>Program Managers</text>
+                    <url>https://www.productplan.com/glossary/program-manager/</url>
+                </link> coordinate activities between multiple projects without directly managing them. They have a large 
+                responsibility to ensure that all the team members understand how to work together and coordinate their efforts 
+                on the way to a larger goal.
+            </message>
+        </template>
+    </category>
+    
+<!-- Yes to UX Design -->    
+    <category>
+        <pattern>YES UX DESIGN</pattern>
+        <template>
+            <message>Sounds like you might enjoy UX Design.</message>
+            <message>
+                <link>
+                    <text>UX Design</text>
+                    <url>https://www.springboard.com/blog/design/what-does-a-ux-designer-do/</url>
+                </link> is the process of creating a valuable, enjoyable experience for users who interact with a product or service. 
+                Successful UX design centers user needs and helps users seamlessly accomplish tasks and meet goals.
+            </message>
+        </template>
+    </category>
+    
+</aiml>
